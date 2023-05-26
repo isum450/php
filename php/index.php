@@ -33,8 +33,8 @@ echo CHAR."은 자유민주국가";
 
 const CHAR = "미국";
 
-*/
-$a = "남자"
+
+$a = "자";
 
 if($a == "남자"){
     echo "남자입니다";
@@ -45,5 +45,16 @@ else {
     echo "중성입니다";
 }
 
-
+switch($a){
+    case"남자":
+        echo "남자입니다.";
+        break;
+    case"여자":
+        echo "여자입니다.";
+        break;
+    default:
+        echo "모르겠네요";
+        break;
+}
+*/
 ?>
