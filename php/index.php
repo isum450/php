@@ -58,3 +58,102 @@ switch($a){
 }
 */
 ?>
+
+for($a = 0; $a <= 10; $a ++)
+{
+    echo $a."<br />";
+    
+    if($a%3 == 0)
+    {
+        echo "====================="."<br />";
+    } else if($a == 6){
+        echo "---------------------"."<br />";
+    }
+    else{
+        echo "--  --  --  --  --  --"."<br />";
+    }
+}
+
+
+$a = 1;
+while($a<145){
+    echo $a."<br />";
+    $a++;
+
+}
+$a = 1;
+do{
+    echo $a."<br />";
+    $a++;
+}while($a < 145);
+
+*/
+$list = array
+(
+    "가" => 8,
+    "아이고" => 75
+);
+//echo "<pre>";
+//print_r($list);
+//echo"</pre>";
+?>
+
+<!DOCTYPE html>
+<html charset="en">
+<head>
+    <title>테이블 배열 연습</title>
+    <style>
+        table{
+            border-collapse:collapse ;
+        }
+        th, td {
+            border: solid 1px;
+        }
+        th{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>시험성적표</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>성적</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>201911180</td>
+                <td>이수환</td>
+                <td>1.3</td>
+            </tr>
+            <tr>
+                <td>2021202032</td>
+                <td>이수민</td>
+                <td>4.34</td>
+            </tr>
+            <tr>
+                <td>?</td>
+                <td>?</td>
+                <td>?</td>
+            </tr>
+            <tr>
+                <td>?</td>
+                <td>?</td>
+                <td>?</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>총점</td>
+                <td colspan="2">??</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
