@@ -116,42 +116,44 @@ $list = array
 </head>
 <body>
     <h1>시험성적표</h1>
-
-    <table>
-        <thead>
+    <thead>
             <tr>
                 <th>번호</th>
                 <th>이름</th>
                 <th>성적</th>
             </tr>
-        </thead>
-        <tbody>
+    </thead>
+    <tbody>
+            <?php
+                $cnt =count($list);
+                $sum =0;
+                $no =1;
+                foreach($list as $key => $value){
+                    /*
+                    echo "<tr>";
+                    echo "<td>".$no."</td>";//번호
+                    echo  "<td>".$key."</td>";//이름
+                    echo  "<td>".$value."</td>";//성적
+                    echo "</tr>";
+                    */
+                    
+            ?>
             <tr>
-                <td>201911180</td>
-                <td>이수환</td>
-                <td>1.3</td>
+                <td><?= $no;?></td>
+                <td><?= $key;?></td>
+                <td><?= $value;?></td>
             </tr>
-            <tr>
-                <td>2021202032</td>
-                <td>이수민</td>
-                <td>4.34</td>
-            </tr>
-            <tr>
-                <td>?</td>
-                <td>?</td>
-                <td>?</td>
-            </tr>
-            <tr>
-                <td>?</td>
-                <td>?</td>
-                <td>?</td>
-            </tr>
+            <?php
+                $no++;
+                $sum += $value;
+                }
+            ?>
 
         </tbody>
         <tfoot>
             <tr>
                 <td>총점</td>
-                <td colspan="2">??</td>
+                <td colspan="2"><?= $sum;?></td>
             </tr>
         </tfoot>
     </table>
