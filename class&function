@@ -1,0 +1,180 @@
+<php?
+/*
+함수
+선언 function 함수명(method){
+    함수에서 실행할 내용
+}
+예)
+function func($a)
+{
+
+}
+함수 사용
+func(123);
+
+
+
+
+$title = "화이군";//전역 변수
+echo $title;
+
+function study($i)
+{
+    $t = $i;//지역 변수
+    echo "<table border = '1';>";
+    echo "<tr>";
+    echo "<td>".$t."</td>";
+    echo "</tr>";
+    echo "</table>";
+}
+function clas($i)
+{
+    global $title;//전역변수를 그대로 사용
+    echo "<table border = '1';>";
+    echo "<tr>";
+    echo "<td>".$title."</td>";
+    echo "</tr>";
+    echo "</table>";
+}
+function sum($a =0, $b=0)
+{
+    return $a+$b; //전달만 함
+}
+
+$list=array
+(
+    "가"=> "수학",
+    "나"=> "과학",
+    "다"=> "영어"
+);
+foreach($list as $value)
+{
+    study($value);
+    clas($value);
+}
+sum(1, 2);
+echo sum(3, 4);
+echo "<br/>";
+print sum(3, 7);
+
+
+function sum($i = 0, $k = 0, $l =0){
+    $sum= $i + $k + $l;
+    return $sum;
+}
+function minus($i = 0, $k = 0, $l =0){
+    $minus= $i - $k - $l;
+    return $minus;
+}
+function multiply($i = 0, $k = 0, $l =0){
+    $multiply= $i * $k * $l;
+    return $multiply;
+}
+function divide($i = 0, $k = 0, $l =0){
+    $divide= $i / $k / $l;
+    return $divide;s
+}
+
+echo sum(1, 2, 3);
+echo "<br/>";
+echo minus(10, 4, 3);
+echo "<br/>";
+echo multiply(3, 4, 3);
+echo "<br/>";
+echo divide(8, 2, 2);
+
+
+
+$score = array(
+    "홍길동1" => 67,
+    "홍길동2" => 87,
+    "홍길동3" => 66,
+    "홍길동4" => 55,
+    "홍길동5" => 90,
+    "홍길동6" => 85,
+    "홍길동7" => 100,
+    "홍길동8" => 43,
+);
+
+function report($name, $score =0){
+    echo "<table border ='1'>";
+    echo "<tr>";
+    echo "<th>이름</th>";
+    echo "<th>성적</th>";
+    echo "</tr>";
+
+    echo "<tr>";
+    echo "<th>".$name."</th>";
+    echo "<td>".$score."</td>";
+    echo "</tr>";
+
+    echo "</table>";
+}
+
+foreach($score as $key=>$value)
+{
+    report($key, $value);
+    echo "</br>";
+}
+*/
+
+//class(객체)
+
+/*
+class = 자동차
+function = 부품
+
+class 클래스명{
+    public function 함수명1(){
+        외부에서 접근 가능한 함수
+        $this -> 함수2();
+    }
+    private function 함수명2(){
+        외부에서 접근할 수 없는 함수
+        $this -> 함수1();
+    }
+    protected function 함수명(){
+        내부와 상속받은 클래스에서 접근할 수 있다.
+    }
+}
+
+클래스를 사용하는 법
+$car = new 클래스명();
+$car->함수2()
+
+class Car{
+    private $_carname;
+    public $contury;
+    
+    public function number(){
+        echo "자동차 번호는 **입니다.";
+    }
+    public function license(){
+        return "홍길동 면허";
+    }
+    private function car_name(){
+        if($this -> _carname == ""){
+            $this ->_carname = "이름없는 자동차";
+        }
+        return $this -> _carname;
+    }
+    public function brand($car_name =""){
+        return $this -> _carname = $car_name;//this 는 이 클래스 자체를 지정.
+    }
+}
+
+$CAR = new car();
+
+echo $CAR -> license();
+echo "</br>";
+
+echo $CAR -> brand("아이소닉");
+$CAR ->contury = "미국";
+echo $CAR->contury;
+*/
+
+//프로그래밍 네이밍 방법
+//1. 스네이크(언더바 사용)
+//2. 카멜 케이드
+// php camel cade vs snake
+?>
