@@ -1,1 +1,34 @@
+<?php
+    $server_name = "localhost";
+    $user = "root";
+    $password = "";
 
+    $database = "php";
+
+    $connect = @mysqli_connect($server_name, $user, $password, $database);
+
+    mysqli_select_db($connect,$database) or die("database select failed");
+    $sql_query = "select * from test";
+    
+    $result = mysqli_query($connect, $sql_query);
+
+    echo "<table>";
+    echo "<tr>";
+    echo "<th>번호</th>";
+    echo "<th>이름</th>";
+    echo "<th>나이</th>";
+    echo "</tr>";
+    echo "</table>";
+    while($row = mysqli_fetch_array($result))
+    {
+        echo "<table>";
+        echo "<tr>";
+        echo "<th>".$row['idx']."</th>";
+        echo "<th>".$row['이름']."</th>";
+        echo "<th>".$row['나이']."</th>";
+        echo "</tr>";
+        echo "</table>";
+    }
+
+    mysqli_close($connect);
+?>
